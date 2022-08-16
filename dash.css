@@ -3,31 +3,133 @@
 *, ul, li{
     margin: 0;
     padding: 0;
-
     list-style-type: none;
     font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --sidebar-main-color:#e5e7eb;
+    --sidebar-main-color:#0f172a;
+    --main-background:  #e2e8f0;
+    
 
 }
 
 
 
 .dash-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.8fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    
+    }
+
+.header{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: 0px -5px 20px ; 
+    background-color: var(--main-background);
+}
+.searchBar{
     display: grid;
     grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.bar>#searchbar{
+    height: 24px;
+    display: grid;
+    width: 100%;
+    background-color: var(--sidebar-main-color);
+    border: 5px solid var(--sidebar-main-color);
+    border-radius: 10px;
+    color: white;
     
 
+}
+.searchIcon{
+    height: 24px;
+    padding-right: 5px;
+    align-self: center;
+    justify-self: end;
+    
+}
+
+.Notif{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr
+    
 
 }
-.sidebar{
-    color: white;
-    grid-column: 1/2;
-    height: 100vh;
+.Notif>div{
+    place-self: center;
+}
+.Notif>.bell{
+    justify-self: end;
+}
+.Notif>.myName{
+    justify-self: start;
+}
+.avatar {
+    place-self: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+.Welcome{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.Welcome>.avatar{
+    width: 4rem;
+    height: 4rem;
+    place-self: center end;
+
+}
+.HelloM{
+    padding-left: 1rem;
+    align-self: center;
+
+}
+.HelloM>span{
+    font-weight: bolder;
+    font-size: 1.25rem;
+}
+
+.headButtons{
+    display: grid;
+    grid-template-columns: repeat(3,.5fr);
+}
+.headButtons>button{
+    border:none;
+    border-radius: 10px;
+    place-self: center;
+    width: 50%;
+    height: 40%;
     background-color: var(--sidebar-main-color);
-    color: black;
+    color: white;
+
+}
+.headButtons>.new{
+    justify-self: end;
+}
+.headButtons>.share{
+    justify-self: start;
+}
+
+
+
+
+
+
+
+.sidebar{
+    grid-row: 1/4;
+    height: 100%;
+    background-color: var(--main-background);
     display: grid;
     grid-template-columns: 0.4fr 1fr;
     grid-template-rows: 5rem repeat(9,3rem) ;
+    
     
 
 }
@@ -35,7 +137,7 @@
     place-self: center;
 }
 .sidebar>div{
-    place-self: center;
+    place-self: center start;
 
 }
 .sidebar>.top{
@@ -48,3 +150,96 @@
     
 }
 
+.main{
+    display: grid;
+    background-color: var(--sidebar-main-color);
+    border: 1px solid black;
+    grid-template-columns: 4fr 1fr;
+
+
+}
+
+
+.card{
+    background: white;
+    width: 80%;
+    height: 80%;
+    place-self: center;
+    border-radius: 5px;
+    background-color:var(--main-background);
+}
+
+
+
+
+
+.yourProjects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr)) ;
+    grid-template-rows: 1fr 1fr;
+}
+
+.yourProjects>.card{
+    padding: 1rem;
+
+}
+.yourProjects>.card>span{
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+
+
+
+
+.trending{
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    position: relative;
+    
+}
+.At{
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+    color: white;
+
+    
+}
+.trending>.cardA>div>span{
+    font-size: 20px;
+    font-weight: bold;
+
+
+}
+.cardA>div{
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.cardB{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: repeat(4,1fr);
+    font-size: 10px;
+    position: relative;
+
+}
+.cardB>.avatar{
+    width: 40px;
+    height: 40px;
+    place-self: center;
+}
+.cardB>.info{
+    place-self:  center start;
+}
+.cardB>span{
+    position: absolute;
+    padding-left: 10px;
+    bottom: 200px;
+    color: white;
+    font-size: 1rem;
+
+}
