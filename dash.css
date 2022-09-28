@@ -10,11 +10,28 @@
     
 
 }
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    box-shadow: inset 0 0 0 0 var(--sidebar-main-color);
+    color: transparent;
+    border: 1px solid var(--main-background);
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    
+  }
+  a:hover {
+    box-shadow: inset 400px 0 0 0 var(--sidebar-main-color);
+    color: var(--main-background);
+    border: 1px solid var(--main-background);
+  }
+  
 
 
 
 .dash-container{
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 0.8fr 4fr;
     grid-template-rows: 1fr 4fr;
@@ -83,11 +100,13 @@
     width: 4rem;
     height: 4rem;
     place-self: center end;
+    padding-bottom: .1rem;
 
 }
 .HelloM{
     padding-left: 1rem;
     align-self: center;
+    color: var(--sidebar-main-color);
 
 }
 .HelloM>span{
@@ -106,7 +125,7 @@
     width: 50%;
     height: 40%;
     background-color: var(--sidebar-main-color);
-    color: white;
+    color: var(--main-background);
 
 }
 .headButtons>.new{
@@ -151,95 +170,70 @@
 }
 
 .main{
-    display: grid;
     background-color: var(--sidebar-main-color);
     border: 1px solid black;
-    grid-template-columns: 4fr 1fr;
-
-
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr)) ;
 }
+
 
 
 .card{
     background: white;
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
     place-self: center;
     border-radius: 5px;
     background-color:var(--main-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Tic-Tac-Toe{
+    background-image: url('images/tictactoe.png');
+    background-size: cover;
+}
+.calculator{
+    background-image: url('images/calculator.jfif');
+    background-size: cover;
+}
+.library{
+    background-image: url('images/books.jfif');
+    background-size: cover;
+}
+.Todo-List{
+    background-image: url('images/todolist.jfif');
+    background-size: cover;
+}
+
+.rps{
+    background-image: url('images/rpsrps.jfif');
+    background-size: cover;
+}
+.Restaurant-Page{
+    background-image: url('images/restau.jfif');
+    background-size: cover;
+}
+
+.signup{
+    background-image: url('images/sigup.png');
+    background-size: cover;
+}
+.Landing-Page{
+    background-image: url('images/landpage.jfif');
+    background-size: cover;
 }
 
 
 
 
 
-.yourProjects{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr)) ;
-    grid-template-rows: 1fr 1fr;
-}
-
-.yourProjects>.card{
-    padding: 1rem;
-
-}
-.yourProjects>.card>span{
-    font-weight: bold;
-    font-size: 1.2rem;
-
-}
 
 
 
 
 
-.trending{
-    display: grid;
-    grid-template-rows: 3fr 2fr;
-    position: relative;
-    
-}
-.At{
-    position: absolute;
-    top: 10px;
-    font-size: 20px;
-    color: white;
 
-    
-}
-.trending>.cardA>div>span{
-    font-size: 20px;
-    font-weight: bold;
-
-
-}
-.cardA>div{
-    font-size: 15px;
-    padding-left: 10px;
-    padding-top: 5px;
-}
-
-.cardB{
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: repeat(4,1fr);
-    font-size: 10px;
-    position: relative;
-
-}
-.cardB>.avatar{
-    width: 40px;
-    height: 40px;
-    place-self: center;
-}
-.cardB>.info{
-    place-self:  center start;
-}
-.cardB>span{
-    position: absolute;
-    padding-left: 10px;
-    bottom: 200px;
-    color: white;
-    font-size: 1rem;
-
-}
