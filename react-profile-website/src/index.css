@@ -20,103 +20,100 @@ body{
     background-color: var(--main-background);
 }
 header{
-    height: 60vh;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    
-
-}
-main{
-    font-size: 3rem;
-    color: var(--sidebar-main-color);
-    
+    position: relative;
 }
 
-footer{
-font-size: 2.5rem;
-display: grid;
-grid-template-columns: 1fr 1fr;
-color: var(--sidebar-main-color);
+h1{
+    font-size: 7rem;
 }
-header,main,footer{
+
+
+
+main,footer{
     width: 90%;
 }
 
 header>img{
-    height: 40vh;
-    width: 30vw;
-    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    filter: blur(1rem);
+    -webkit-filter: blur(0.5rem);
+}
+.centered,.centered-paragraph {
+    color: var(--sidebar-main-color);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centered-paragraph{
+    border: 0.1rem solid var(--sidebar-main-color);
+    padding: 0.5rem;
+    top: 60%;
+    font-size: 2.5rem;
+    color: var(--sidebar-main-color);
+}
+.bottom-left {
+    color: var(--sidebar-main-color);
+    position: absolute;
+    bottom: 3.1rem;
+    left: 9rem;
+    font-size: 4rem;
 }
 
 
 
-footer>:first-child{
-    height: 50vh;
-    width: 35vw;
-    border-radius: 0.5rem;
-}
-
-.contacts>*{
-    padding: 1.5rem 0 1.5rem 0;
-}
 
 
-.main{
+
+main{
     background-color: var(--sidebar-main-color);
-    border: .1rem solid black;
     height: 120vh;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(40rem,1fr)) ;
     gap: 0.5rem;
     margin: auto;
-    border-radius: 0.5rem;
-    
+    font-size: 3rem;
+    color: var(--sidebar-main-color);
 }
 
 
 
 
 .devicon-github-original-wordmark,.devicon-google-plain{
-    font-size: 5rem;
-    color: var(--sidebar-main-color);
+  font-size: 5rem;
+  color: var(--sidebar-main-color);
+  
+}
+
+.gitLink{
+    border: 0.2rem solid var(--sidebar-main-color);
+    padding: 0.5rem;
+    position: fixed;
+    margin-top: 30rem;
+    margin-left: 0.5rem;
+    z-index: 1;
     
 }
 
-.gitLink,.mailLink{
-    position: fixed;
-    margin-top: 1.8rem;
-    margin-left: 1rem;
-}
-.mailLink{
-    margin-top: 10rem;
-}
 
 
 
 
-.aboutMe{
-    background-color: var(--sidebar-main-color);
-    color: var(--main-background);
-    font-size: 2rem;
-    padding: 1.5rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    height: 50%;
 
-
-}
 
 .card{
     
     width: 90%;
     height: 90%;
-    border-radius: .5rem;
     background-color:var(--main-background);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     background-position: center;
     background-size: cover;
     box-shadow: inset 0 0 0 0 var(--sidebar-main-color);
@@ -133,51 +130,38 @@ footer>:first-child{
 
 
 .Tic-Tac-Toe{
-    background-image: url('images/portoTTT.png');
+  background-image: url('../public/assets/portoTTT.png');
 }
 .calculator{
-    background-image: url('images/portoCalc.png');
+  background-image: url('../public/assets/portoCalc.png');
 }
 .library{
-    background-image: url('images/portola.png');
-    
+  background-image: url('../public/assets/portola.png');
+  
 }
 .Todo-List{
-    background-image: url('images/protoTod.png');
-    
+  background-image: url('../public/assets/portot.png');
+  
 }
 
 .rps{
-    background-image: url('images/portoRPS.png');
-    
+  background-image: url('../public/assets/portoRPS.png');
+  
 }
 .Restaurant-Page{
-    background-image: url('images/protorp.png');
+  background-image: url('../public/assets/protorp.png');
 }
 
 .signup{
-    background-image: url('images/portoform.png');
-    
+  background-image: url('../public/assets/portoform.png');
+  
 }
 .Landing-Page{
-    background-image: url('images/protoLP.png');
-    
+  background-image: url('../public/assets/protoLP.png');
+  
 }
 .weatherApp{
-    background-image: url('images/portoWa.png');
+  background-image: url('../public/assets/portoWa.png');
 
 }
-
-.first-react-app{
-    background-image: url("images/portoRFP.png");
-}
-
-
-
-
-
-
-
-
-
 
